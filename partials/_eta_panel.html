@@ -1,0 +1,14 @@
+<md-card id="eta-panel"
+         ng-controller="etaPanelController as etaCtl"
+         ng-show="gmapCtl.showEtaPanel">
+    <md-card-content>
+        <p>
+            <b>ETA:</b> {{ etaCtl.etaToDest | setDecimal:1 }} mins
+            <md-button class="md-icon-button md-primary" ng-click="etaCtl.showDialog($event)">
+                <md-tooltip md-direction="right">Show ETA Detail</md-tooltip>
+                <md-icon>&#xE8F4;</md-icon>
+            </md-button>
+        </p>
+
+    </md-card-content>
+</md-card>
